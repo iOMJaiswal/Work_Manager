@@ -1,0 +1,111 @@
+{% extends './basic.html' %}
+{% block title%}Add Employee{% endblock %}
+
+{%block body%}
+
+<form action="/add_emp" method="POST">
+
+  {% csrf_token %}
+
+  <div class="mb-3">
+    <label for="first_name" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="first_name" aria-describedby="emailHelp" value="{{first_name}}">
+  </div>
+  <div class="mb-3">
+    <label for="last_name" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="last_name" value="{{last_name}}">
+  </div>
+  <div class="mb-3">
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Select Department</option>
+      <option value="1">Purchase Department</option>
+      <option value="2">Human Resource Department</option>
+      <option value="3">Sales Department</option>
+      <option value="4">Finance Department</option>
+      <option value="5">Operations Department</option>
+      <option value="6">Marketing Department</option>
+      <option value="7">General Management</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Select Role</option>
+      <option value="1">Quality Control Inspector</option>
+      <option value="2">Production Manager</option>
+      <option value="3">Machinist/Operator</option>
+      <option value="4">Welder</option>
+      <option value="5">Assembler</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input type="number" class="form-control" id="phone" value="{{phone}}">
+  </div>
+  <div class="mb-3">
+    <label for="salary" class="form-label">Salary</label>
+    <input type="number" class="form-control" id="salary" value="{{salary}}">
+  </div>
+  <div class="mb-3">
+    <label for="bonus" class="form-label">Bonus</label>
+    <input type="number" class="form-control" id="bonus" value="{{bonus}}">
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+
+
+
+{%endblock%}
+
+
+
+
+{% extends './basic.html' %}
+{% block title%}Add Employee{% endblock %}
+
+{%block body%}
+
+<form action="/add_emp" method="POST">
+
+  {% csrf_token %}
+
+  <div class="mb-3">
+    <label for="first_name" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="first_name" aria-describedby="emailHelp" value="{{first_name}}">
+  </div>
+  <div class="mb-3">
+    <label for="last_name" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="last_name" value="{{last_name}}">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="dept" class="form-label">Department ID</label>
+    <input type="number" class="form-control" id="dept" value="{{dept}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="role" class="form-label">Role ID</label>
+    <input type="number" class="form-control" id="role" value="{{role}}">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input type="number" class="form-control" id="phone" value="{{phone}}">
+  </div>
+  <div class="mb-3">
+    <label for="salary" class="form-label">Salary</label>
+    <input type="number" class="form-control" id="salary" value="{{salary}}">
+  </div>
+  <div class="mb-3">
+    <label for="bonus" class="form-label">Bonus</label>
+    <input type="number" class="form-control" id="bonus" value="{{bonus}}">
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+
+
+
+{%endblock%}

@@ -1,0 +1,66 @@
+{% extends './basic.html' %}
+{% block title%}Add Employee{% endblock %}
+
+{%block body%}
+
+{%for emp in emps%}
+<div class="container mt-4">
+  <form action="/update_emp/{{emp.id}}" method="POST">
+  
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="first_name" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="emailHelp"
+        value="{{emp.first_name}}">
+    </div>
+    <div class="mb-3">
+      <label for="last_name" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="last_name" name="last_name" value="{{emp.last_name}}">
+    </div>
+    <div class="mb-3">
+      <select class="form-select" aria-label="Default select example" name="dept">
+        <option selected>{{emp.department}}</option>
+        <option value="Purchase Department">Purchase Department</option>
+        <option value="Human Resource Department">Human Resource Department</option>
+        <option value="Sales Department">Sales Department</option>
+        <option value="Finance Department">Finance Department</option>
+        <option value="Operations Department">Operations Department</option>
+        <option value="Marketing Department">Marketing Department</option>
+        <option value="General Management">General Management</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <select class="form-select" aria-label="Default select example" name="role">
+        <option selected>{{emp.role}}</option>
+        <option value="Quality Control Inspector">Quality Control Inspector</option>
+        <option value="Production Manager">Production Manager</option>
+        <option value="Machinist/Operator">Machinist/Operator</option>
+        <option value="Welder">Welder</option>
+        <option value="Assembler">Assembler</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="number" class="form-control" id="phone" name="phone" value="{{emp.phone}}">
+    </div>
+    <div class="mb-3">
+      <label for="salary" class="form-label">Salary</label>
+      <input type="number" class="form-control" id="salary" name="salary" value="{{emp.salary}}">
+    </div>
+    <div class="mb-3">
+      <label for="bonus" class="form-label">Bonus</label>
+      <input type="number" class="form-control" id="bonus" name="bonus" value="{{emp.bonus}}">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Update</button>
+    
+  </form>
+</div>
+{% endfor %}
+
+
+
+
+
+
+{%endblock%}

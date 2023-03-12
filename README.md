@@ -10,6 +10,8 @@ The system is deployed on AWS.
 * Cassandra 4.0 or later installed on the system
 * AWS account for deployment
 
+## Website Preview
+* Checkout : http://34.219.173.97:8000/
 ## Installation
 
 1. Clone the repository
